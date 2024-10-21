@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Contato</title>
+    <link rel="stylesheet" href="formulario.css"> <!-- Link para o CSS -->
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+               <a href="index.html">Inicio</a>
+            </li>
+            <li>
+               <a href="Quem Somos.html">Quem Somos</a>
+            </li>
+            <li>
+                <a href="contact.html">Contato</a>
+            </li>
+            <li>
+                <a href="Formulario.html">Formulario</a>
+            </li>
+            <li>
+                <a href=login.html>login</a>
+             </li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Preencha o Formulário</h1>
+
+        <form id="formulario">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        // Adiciona um evento ao formulário
+        document.getElementById('formulario').addEventListener('submit', function(event) {
+            // Impede o envio do formulário da forma tradicional
+            event.preventDefault();
+
+            // Captura os dados preenchidos
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const telefone = document.getElementById('telefone').value;
+            const mensagem = document.getElementById('mensagem').value;
+
+            // Recupera os dados salvos no localStorage ou cria um array vazio
+            let dados = JSON.parse(localStorage.getItem('dadosFormularios')) || [];
+
+            // Adiciona os novos dados no array
+            dados.push({ nome, email, telefone, mensagem });
+
+            // Salva os dados no localStorage
+            localStorage.setItem('dadosFormularios', JSON.stringify(dados));
+
+            // Redireciona para a página de resultado
+            window.location.href = "Resultado_For.html";
+        });
+    </script>
+</body>
+</html>
+

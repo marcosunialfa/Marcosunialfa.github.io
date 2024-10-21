@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado do Formulário</title>
+    <link rel="stylesheet" href="formulario.css"> <!-- Usando o mesmo CSS -->
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+               <a href="index.html">Inicio</a>
+            </li>
+            <li>
+               <a href="Quem Somos.html">Quem Somos</a>
+            </li>
+            <li>
+                <a href="contact.html">Contato</a>
+            </li>
+            <li>
+                <a href="Formulario.html">Formulario</a>
+            </li>
+            <li>
+                <a href=login.html>login</a>
+             </li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Dados Enviados</h1>
+        <p><strong>Nome:</strong> <span id="resultadoNome"></span></p>
+        <p><strong>E-mail:</strong> <span id="resultadoEmail"></span></p>
+        <p><strong>Telefone:</strong> <span id="resultadoTelefone"></span></p>
+        <p><strong>Mensagem:</strong> <span id="resultadoMensagem"></span></p>
+
+        <!-- Link para ver todos os dados -->
+        <a href="visualizar_dados.html">Ver todos os dados enviados</a>
+        <br>
+        <a href="formulario.html">Voltar ao Formulário</a>
+    </div>
+
+    <script>
+        // Recupera os últimos dados armazenados no localStorage
+        let dados = JSON.parse(localStorage.getItem('dadosFormularios')) || [];
+
+        // Exibe os dados do último envio
+        let ultimoDado = dados[dados.length - 1];
+        document.getElementById('resultadoNome').textContent = ultimoDado.nome;
+        document.getElementById('resultadoEmail').textContent = ultimoDado.email;
+        document.getElementById('resultadoTelefone').textContent = ultimoDado.telefone;
+        document.getElementById('resultadoMensagem').textContent = ultimoDado.mensagem;
+    </script>
+</body>
+</html>

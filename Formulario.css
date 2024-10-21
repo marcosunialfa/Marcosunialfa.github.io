@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color:#2A6DB0 ;
+    margin: 0;
+    padding: 20px;
+    height: 100vh; /* Faz com que o conteúdo ocupe toda a altura da tela */
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto; /* Centraliza a container horizontalmente */
+    background-color: #fff;
+    padding: 20px; /* Aumentei o padding para mais espaçamento */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px; /*0000 Aumentei o espaço entre o label e o campo */
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Garante que padding e border sejam incluídos na largura total */
+}
+
+button {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 15px 20px;
+    background-color: #2A6DB0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Botão ocupa 100% da largura */
+    font-size: 30px; /* Tamanho de fonte maior para melhor visibilidade */
+}
+
+button:hover {
+    background-color: #1f507a;
+}
+
+/* Essa e a parte de vai ser como padaro no CABEÇALHO de todo o SITE*/
+nav {
+    background-color: #2A6DB0;
+    padding: 15px;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #1f507a;
+    border-radius: 5px;
+}
+/* esse e o fim da estilização do cabeçalho*/

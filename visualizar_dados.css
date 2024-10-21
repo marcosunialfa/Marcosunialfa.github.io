@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 600px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilizando a tabela para adicionar separação */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Remove espaços entre as células da tabela */
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd; /* Adiciona borda nas células */
+}
+
+thead th {
+    background-color: #f2f2f2; /* Cor de fundo do cabeçalho */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Adiciona uma cor de fundo a cada linha par */
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1; /* Adiciona um efeito hover às linhas */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+/* Essa e a parte de vai ser como padaro no CABEÇALHO de todo o SITE*/
+nav {
+    background-color: #2A6DB0;
+    padding: 15px;
+    position: absolute; /* Fixa o menu em uma posição específica */
+    left: 0; /* Alinha o menu à esquerda */
+    top: 0;  /* Coloca o menu no topo da página */
+    height: 96.3vh; /* Faz com que o menu ocupe toda a altura da tela */
+    width: 200px; /* Define a largura do menu */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: block; /* Exibe cada item do menu em uma linha nova */
+    margin-bottom: 10px; /* Espaçamento entre os itens */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    display: block; /* Faz com que o link ocupe toda a largura do item de menu */
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #1f507a;
+    border-radius: 5px;
+}
+
+/* esse e o fim da estilização do cabeçalho*/
+
+/* Estilo do botão Sair */
+button.sair {
+    font-family: Arial, sans-serif;
+    padding: 10px 60px;
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    position: absolute;
+    bottom: 1px; /* Botão no final do menu */
+    left: 0;
+    font-size: 1.5em; /* Tamanho da fonte */
+    font-weight: bold;/* Negrito */
+}
+
+button.sair:hover {
+    background-color: #d14343;
+}

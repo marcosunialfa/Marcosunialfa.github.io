@@ -1,0 +1,76 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Spacer - Login</title>
+        <link rel="stylesheet" href="login.css">
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li>
+                   <a href="index.html">Inicio</a>
+                </li>
+                <li>
+                   <a href="Quem Somos.html">Quem Somos</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contato</a>
+                </li>
+                <li>
+                    <a href="Formulario.html">Formulario</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="left-side">
+                <div class="logo">
+                    <img src="rocket.png" alt="Spacer Logo">
+                    <h1>Spacer</h1>
+                </div>
+                <p>Welcome to Spacer! Please log in to access your account.</p>
+            </div>
+            <div class="right-side">
+                <h2>LOGIN</h2>
+                <!-- Formulário de login -->
+                <form id="loginForm">
+                    <label for="login">Usuário</label>
+                    <input type="text" id="login" placeholder="Digite a Login" required>
+                    
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" placeholder="Digite a Senha" required>
+                    
+                    <button type="submit" class="sign-in-btn">Sign In</button>
+                </form>
+            </div>
+        </div>
+    
+        <script>
+            // Vetor de usuários válidos
+            const validUsers = [
+                { login: 'admin', senha: 'admin' },
+                { login: 'user2@example.com', senha: 'password123' }
+            ];
+    
+            // Função para verificar o login
+            document.getElementById('loginForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Evita que a página seja recarregada
+    
+                const login = document.getElementById('login').value;
+                const senha = document.getElementById('password').value;
+    
+                // Verifica se as credenciais são válidas
+                const user = validUsers.find(user => user.login === login && user.senha === senha);
+    
+                if (user) {
+                    // Redireciona para a página dashboard.html em caso de sucesso
+                    window.location.href = 'painel_dados.html';
+                } else {
+                    alert('Email or Password is incorrect. Please try again.');
+                }
+            });
+        </script>
+    </body>
+    </html>
+    

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados Enviados</title>
+    <link rel="stylesheet" href="visualizar_dados.css"> <!-- Usando o mesmo CSS -->
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+               <a href="index.html">Inicio</a>
+            </li>
+            <li>
+               <a href="Quem Somos.html">Quem Somos</a>
+            </li>
+            <li>
+                <a href="contact.html">Contato</a>
+            </li>
+            <li>
+                <a href="Formulario.html">Formulario</a>
+            </li>
+            <li>
+                <a href=login.html>login</a>
+             </li>
+             <a href="login.html">
+                <button class="sair">Sair</button>
+            </a>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Todos os Dados Enviados</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Telefone</th>
+                    <th>Mensagem</th>
+                </tr>
+            </thead>
+            <tbody id="dadosTabela">
+                <!-- Os dados serão inseridos aqui -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Recupera todos os dados armazenados no localStorage
+        let dados = JSON.parse(localStorage.getItem('dadosFormularios')) || [];
+
+        // Referência ao corpo da tabela
+        const tabela = document.getElementById('dadosTabela');
+
+        // Itera sobre os dados e insere cada linha na tabela
+        dados.forEach(function(dado) {
+            let row = tabela.insertRow(); // Cria uma nova linha
+
+            let cell1 = row.insertCell(0);
+            let cell2 = row.insertCell(1);
+            let cell3 = row.insertCell(2);
+            let cell4 = row.insertCell(3);
+
+            // Insere os dados nas células
+            cell1.textContent = dado.nome;
+            cell2.textContent = dado.email;
+            cell3.textContent = dado.telefone;
+            cell4.textContent = dado.mensagem;
+        });
+    </script>
+</body>
+</html>

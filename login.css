@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    height: 96.3vh;
+    width: 100%;
+    }
+
+/* Estilo para o lado esquerdo da tela de login */
+.left-side {
+    background-color: #2A6DB0;
+    color: white;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.left-side .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.left-side .logo img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.left-side p {
+    text-align: center;
+    max-width: 300px;
+}
+
+/* Estilo para o lado direito da tela de login */
+.right-side {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.right-side h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Estilo para o formulário */
+form {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #666;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.sign-in-btn {
+    background-color: #2A6DB0;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Essa e a parte de vai ser como padaro no CABEÇALHO de todo o SITE*/
+nav {
+    background-color: #2A6DB0;
+    padding: 15px;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #1f507a;
+    border-radius: 5px;
+}
+/* esse e o fim da estilização do cabeçalho*/
